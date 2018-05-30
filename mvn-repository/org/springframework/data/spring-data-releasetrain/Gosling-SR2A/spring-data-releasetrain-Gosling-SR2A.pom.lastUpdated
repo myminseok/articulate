@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 30 18:59:50 KST 2018
+http\://localci.pcfdemo.net\:8081/nexus/content/repositories/releases/.lastUpdated=1527674345470
+http\://localci.pcfdemo.net\:8081/nexus/content/repositories/releases/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1527674390154

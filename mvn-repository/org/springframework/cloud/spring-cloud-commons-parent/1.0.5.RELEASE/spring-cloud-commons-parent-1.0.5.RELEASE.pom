@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-commons-parent</artifactId>
+	<version>1.0.5.RELEASE</version>
+	<packaging>pom</packaging>
+	<name>Spring Cloud Commons Parent</name>
+	<description>Spring Cloud Commons Parent</description>
+	<url>http://projects.spring.io/spring-cloud/</url>
+	<parent>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-build</artifactId>
+		<version>1.0.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<scm>
+		<url>https://github.com/spring-cloud/spring-cloud-commons</url>
+		<connection>scm:git:git://github.com/spring-cloud/spring-cloud-commons.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/spring-cloud/spring-cloud-commons.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<properties>
+		<main.basedir>.</main.basedir>
+		<bintray.package>commons</bintray.package>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-commons-dependencies</artifactId>
+				<version>1.0.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<useProjectReferences>false</useProjectReferences>
+					<additionalConfig>
+						<file>
+							<name>.settings/org.eclipse.jdt.ui.prefs</name>
+							<location>${main.basedir}/eclipse/org.eclipse.jdt.ui.prefs</location>
+						</file>
+						<file>
+							<name>.settings/org.eclipse.jdt.core.prefs</name>
+							<location>${main.basedir}/eclipse/org.eclipse.jdt.core.prefs</location>
+						</file>
+					</additionalConfig>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+	  <module>spring-cloud-commons-dependencies</module>
+	  <module>spring-cloud-context</module>
+	  <module>spring-cloud-commons</module>
+	  <module>docs</module>
+	</modules>
+</project>
