@@ -141,15 +141,25 @@
 
 <pluginRepositories>
     <pluginRepository>
-      <id>central</id>
-      <name>Maven Plugin Repository</name>
-      <url>http://localci.pcfdemo.net:8081/nexus/content/repositories/releases</url>
+      <id>alocal</id>
+      <name>Maven Repository Switchboard</name>
       <layout>default</layout>
+      <url>http://localci.pcfdemo.net:8081/nexus/content/repositories/releases</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    
+    <pluginRepository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>https://repo.maven.apache.org/maven2</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
       <releases>
-        <updatePolicy>never</updatePolicy>
+        <enabled>false</enabled>
       </releases>
     </pluginRepository>
   </pluginRepositories> 
