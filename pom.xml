@@ -116,13 +116,26 @@
 
  <repositories>
     <repository>
-      <id>central</id>
+      <id>alocal</id>
       <name>Maven Repository Switchboard</name>
       <layout>default</layout>
       <url>http://localci.pcfdemo.net:8081/nexus/content/repositories/releases</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
+    </repository>
+    <!-- override to disable -->
+    <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+            <enabled>false</enabled>
+        </releases>
     </repository>
   </repositories>
 
