@@ -119,7 +119,7 @@
       <id>central</id>
       <name>Maven Repository Switchboard</name>
       <layout>default</layout>
-      <url>http://localnexus.pcfdemo.net:8081/maven2</url>
+      <url>http://localci.pcfdemo.net:8081/maven2</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -130,7 +130,7 @@
     <pluginRepository>
       <id>central</id>
       <name>Maven Plugin Repository</name>
-      <url>http://gitlab.pcfdemo.net/maven2</url>
+      <url>http://localci.pcfdemo.net/maven2</url>
       <layout>default</layout>
       <snapshots>
         <enabled>false</enabled>
