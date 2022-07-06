@@ -1,9 +1,8 @@
 ---
 applications:
-- name: blue-green
+- name: articulate
   memory: 1G 
   instances: 1
-  host: blue-green
   path: target/articulate-0.0.1-SNAPSHOT.jar
   env:
       JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
